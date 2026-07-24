@@ -14,21 +14,9 @@ public class Calculator {
 
     public double divide(double first, double second) {
         if (second == 0) {
-            throw new ArithmeticException("Cannot divide by zero.");
+            System.out.println("Error: Cannot divide by zero.");
+            return 0;
         }
         return first / second;
-    }
-
-
-
-    public double power(double base, double exponent) {
-        return Math.pow(base, exponent);
-    }
-
-    public double modulus(double first, double second) {
-        if (second == 0) {
-            throw new ArithmeticException("Cannot compute modulus with zero divisor.");
-        }
-        return first % second;
     }
 }
