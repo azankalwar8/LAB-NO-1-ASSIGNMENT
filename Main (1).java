@@ -1,15 +1,20 @@
-public class  calculatorMain {
+public class Main {
     public static void main(String[] args) {
 
-        Calculator calc = new Calculator();
+        Car myCar = new Car();
 
-        // Using inputs: 12.5 and 2.5
-        System.out.println("Add: " + calc.add(12.5, 2.5));          // Output: 15.0
-        System.out.println("Subtract: " + calc.subtract(12.5, 2.5)); // Output: 10.0
-        System.out.println("Multiply: " + calc.multiply(12.5, 2.5)); // Output: 31.25
-        System.out.println("Divide: " + calc.divide(12.5, 2.5));     // Output: 5.0
+        // Initial default state
+        myCar.displayState();
 
-        // Edge case: divide by zero using input 25
-        System.out.println("Divide by zero test: " + calc.divide(25, 0));
+        // Updated values: Porsche, Midnight Blue
+        myCar.setDetails("Porsche", "Midnight Blue");
+
+        myCar.startEngine();
+
+        myCar.displayState();
+
+        myCar.stopEngine();
+
+        myCar.displayState();
     }
 }
