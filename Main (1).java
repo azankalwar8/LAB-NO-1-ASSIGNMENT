@@ -1,20 +1,32 @@
 public class Main {
     public static void main(String[] args) {
 
-        Car myCar = new Car();
+        Car nissan = new Car();
+        Car mazda = new Car();
 
-        // Initial default state
-        myCar.displayState();
+        nissan.setDetails("Nissan GT-R", "Pearl White");
+        mazda.setDetails("Mazda RX-7", "Sunburst Yellow");
 
-        // Updated values: Porsche, Midnight Blue
-        myCar.setDetails("Porsche", "Midnight Blue");
+        nissan.drive();
 
-        myCar.startEngine();
+        nissan.startEngine();
+        mazda.startEngine();
 
-        myCar.displayState();
+        nissan.drive();
+        nissan.moveFast();
+        nissan.moveLeft();
+        nissan.horn();
 
-        myCar.stopEngine();
+        mazda.drive();
+        mazda.moveRight();
 
-        myCar.displayState();
+        nissan.displayState();
+        mazda.displayState();
+
+        nissan.moveSlow();
+        nissan.stopEngine();
+        nissan.displayState();
+
+        mazda.displayState();
     }
 }
